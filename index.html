@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Armatura Gradnja — Gradimo ono što traje</title>
+  <meta name="description" content="Stambeni, poslovni i industrijski objekti po sistemu ključ u ruke. Od temelja do krova, na vreme i po dogovorenoj ceni.">
+  <meta name="theme-color" content="#0d0d0b">
+  <meta property="og:title" content="Armatura Gradnja — Gradimo ono što traje">
+  <meta property="og:description" content="Demo sajt za građevinske firme. Dizajn i razvoj: Salty.rs">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ff5a1f'/%3E%3Cpath d='M6 26 16 6l10 20h-5l-5-10-5 10z' fill='%230d0d0b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__grid"></div>
+    <div class="loader__top">
+      <span class="mono">[ <span data-company>ARMATURA</span> ]</span>
+      <span class="mono">44.7866° N · 20.4489° E</span>
+    </div>
+    <div class="loader__center">
+      <div class="loader__crane">
+        <span class="loader__cable"></span>
+        <span class="loader__block"></span>
+      </div>
+      <div class="loader__count"><span class="js-count">000</span><small>%</small></div>
+      <div class="loader__msg mono js-loader-msg">Iskop temelja…</div>
+    </div>
+    <div class="loader__bar"><span class="js-loader-bar"></span></div>
+    <div class="loader__panels"><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span class="cursor__label">Pogledaj</span></div></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="logo" aria-label="Početna">
+      <svg viewBox="0 0 32 32" class="logo__mark" aria-hidden="true"><rect width="32" height="32" fill="currentColor"/><path d="M6 26 16 6l10 20h-5l-5-10-5 10z" fill="#0d0d0b"/></svg>
+      <span class="logo__text"><b data-company>ARMATURA</b><small>GRADNJA</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Glavna navigacija">
+      <a href="#usluge" data-hover>Usluge</a>
+      <a href="#projekti" data-hover>Projekti</a>
+      <a href="#proces" data-hover>Proces</a>
+      <a href="#kalkulator" data-hover>Kalkulator</a>
+      <a href="#kontakt" data-hover>Kontakt</a>
+    </nav>
+    <a href="#kontakt" class="btn btn--sm magnetic" data-hover><span>Zatraži ponudu</span></a>
+    <button class="burger" aria-label="Meni" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <div class="menu" aria-hidden="true">
+    <nav>
+      <a href="#usluge"><i>01</i>Usluge</a>
+      <a href="#projekti"><i>02</i>Projekti</a>
+      <a href="#proces"><i>03</i>Proces</a>
+      <a href="#kalkulator"><i>04</i>Kalkulator</a>
+      <a href="#kontakt"><i>05</i>Kontakt</a>
+    </nav>
+    <div class="menu__foot mono"><a href="tel:+381111234567">+381 11 123 4567</a><a href="mailto:office@armatura.rs">office@armatura.rs</a></div>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__hud mono" aria-hidden="true">
+        <div class="hud hud--tl"><span>OBJEKAT</span><b>STAMBENI KOMPLEKS „SAVA 3“</b></div>
+        <div class="hud hud--tr"><span>SPRAT</span><b class="js-floor">00 / 16</b></div>
+        <div class="hud hud--bl"><span>VISINA</span><b class="js-height">0.00 m</b></div>
+        <div class="hud hud--br"><span>STATUS</span><b class="js-status">U IZGRADNJI</b></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow mono reveal-up"><span class="dot"></span> Od 1998. · Beograd · Novi Sad · Niš</p>
+        <h1 class="hero__title">
+          <span class="line"><span>Gradimo</span></span>
+          <span class="line"><span>ono što</span></span>
+          <span class="line"><span><em class="outline">traje</em><b class="accent">.</b></span></span>
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__lead reveal-up">Stambeni, poslovni i industrijski objekti po sistemu <strong>ključ u ruke</strong>. Jedan ugovor, jedna fiksna cena, jedan rok — i tim koji ga poštuje.</p>
+          <div class="hero__ctas reveal-up">
+            <a href="#kalkulator" class="btn magnetic" data-hover><span>Izračunaj cenu gradnje</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <a href="#projekti" class="btn btn--ghost magnetic" data-hover><span>Naši projekti</span></a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#manifest" class="scroll-cue mono" aria-label="Skroluj dole"><span>Skroluj</span><i></i></a>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track js-marquee" data-speed="1">
+        <span>Stambeni objekti</span><i>✦</i><span>Poslovni prostori</span><i>✦</i><span>Industrijske hale</span><i>✦</i><span>Infrastruktura</span><i>✦</i><span>Rekonstrukcije</span><i>✦</i><span>Projektovanje</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ MANIFEST ============ -->
+    <section class="manifest" id="manifest">
+      <div class="container">
+        <p class="label mono"><span>(01)</span> Ko smo mi</p>
+        <p class="manifest__text js-words">Svaka zgrada počinje obećanjem. Mi ga držimo 27 godina — betonom, čelikom i rokovima koji se ne pomeraju. Bez skrivenih troškova, bez izgovora, bez „biće sledeće nedelje“. Samo objekti koji stoje kao što smo rekli da će stajati.</p>
+        <div class="manifest__sign">
+          <div class="sign__avatar">MJ</div>
+          <div><b>Marko Jovanović</b><span class="mono">Osnivač i glavni inženjer</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat reveal-up"><b><span class="js-counter" data-to="27">0</span></b><span>godina na tržištu</span></div>
+        <div class="stat reveal-up"><b><span class="js-counter" data-to="340">0</span>+</b><span>završenih objekata</span></div>
+        <div class="stat reveal-up"><b><span class="js-counter" data-to="1.2" data-decimals="1">0</span>M</b><span>m² izgrađenog prostora</span></div>
+        <div class="stat reveal-up"><b><span class="js-counter" data-to="98">0</span>%</b><span>projekata predato u roku</span></div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services" id="usluge">
+      <div class="container">
+        <div class="section-head">
+          <p class="label mono"><span>(02)</span> Usluge</p>
+          <h2 class="h2 split-lines"><span class="line"><span>Sve na jednom</span></span><span class="line"><span>gradilištu<b class="accent">.</b></span></span></h2>
+        </div>
+        <ul class="svc-list">
+          <li class="svc" data-art="residential" data-hover>
+            <span class="svc__num mono">01</span>
+            <h3 class="svc__title">Stambena gradnja</h3>
+            <p class="svc__desc">Zgrade i kompleksi od 4 do 200 stanova. Od dozvole do tehničkog prijema.</p>
+            <span class="svc__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </li>
+          <li class="svc" data-art="office" data-hover>
+            <span class="svc__num mono">02</span>
+            <h3 class="svc__title">Poslovni objekti</h3>
+            <p class="svc__desc">Kancelarije, tržni centri i hoteli sa staklenim fasadama koje se pamte.</p>
+            <span class="svc__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </li>
+          <li class="svc" data-art="industrial" data-hover>
+            <span class="svc__num mono">03</span>
+            <h3 class="svc__title">Industrijske hale</h3>
+            <p class="svc__desc">Čelične i AB hale, magacini i logistički centri do 50.000 m².</p>
+            <span class="svc__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </li>
+          <li class="svc" data-art="bridge" data-hover>
+            <span class="svc__num mono">04</span>
+            <h3 class="svc__title">Infrastruktura</h3>
+            <p class="svc__desc">Mostovi, putevi i komunalna mreža — za opštine i privatne investitore.</p>
+            <span class="svc__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </li>
+          <li class="svc" data-art="villa" data-hover>
+            <span class="svc__num mono">05</span>
+            <h3 class="svc__title">Rekonstrukcije</h3>
+            <p class="svc__desc">Dogradnja, nadogradnja i sanacija postojećih objekata uz minimalan zastoj.</p>
+            <span class="svc__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </li>
+        </ul>
+      </div>
+      <div class="svc-preview" aria-hidden="true"><div class="svc-preview__inner"></div></div>
+    </section>
+
+    <!-- ============ PROJECTS (horizontal) ============ -->
+    <section class="projects" id="projekti">
+      <div class="projects__sticky">
+        <div class="projects__head container">
+          <p class="label mono"><span>(03)</span> Izabrani projekti</p>
+          <div class="projects__progress"><span class="js-proj-progress"></span></div>
+          <p class="mono projects__count"><span class="js-proj-index">01</span> / 05</p>
+        </div>
+        <div class="projects__track js-proj-track">
+          <div class="projects__intro">
+            <h2 class="h2">Objekti koji<br>definišu <em class="outline">horizont</em><b class="accent">.</b></h2>
+            <p>Pet od preko 340 objekata koje smo predali investitorima — na vreme, po dogovorenoj ceni.</p>
+            <span class="mono drag-hint">Skroluj → </span>
+          </div>
+          <article class="proj" data-hover data-cursor="Detalji">
+            <div class="proj__media"><div class="proj__art" data-art="tower"></div></div>
+            <div class="proj__meta"><span class="mono">2025 · Beograd</span><h3>Sava Tower</h3><p>Stambeno-poslovni toranj · 32 sprata · 41.000 m²</p></div>
+          </article>
+          <article class="proj" data-hover data-cursor="Detalji">
+            <div class="proj__media"><div class="proj__art" data-art="residential"></div></div>
+            <div class="proj__meta"><span class="mono">2024 · Novi Sad</span><h3>Liman Park</h3><p>Stambeni kompleks · 6 zgrada · 380 stanova</p></div>
+          </article>
+          <article class="proj" data-hover data-cursor="Detalji">
+            <div class="proj__media"><div class="proj__art" data-art="industrial"></div></div>
+            <div class="proj__meta"><span class="mono">2024 · Šimanovci</span><h3>LogiHub 2</h3><p>Logistički centar · 28.500 m² · 9 meseci</p></div>
+          </article>
+          <article class="proj" data-hover data-cursor="Detalji">
+            <div class="proj__media"><div class="proj__art" data-art="bridge"></div></div>
+            <div class="proj__meta"><span class="mono">2023 · Niš</span><h3>Most na Nišavi</h3><p>Pešačko-biciklistički most · raspon 86 m</p></div>
+          </article>
+          <article class="proj" data-hover data-cursor="Detalji">
+            <div class="proj__media"><div class="proj__art" data-art="office"></div></div>
+            <div class="proj__meta"><span class="mono">2023 · Beograd</span><h3>Nova Galerija</h3><p>Poslovni centar · LEED Gold · 18.000 m²</p></div>
+          </article>
+          <div class="projects__end">
+            <p class="mono">Sledeći može biti vaš.</p>
+            <a href="#kontakt" class="btn magnetic" data-hover><span>Počnimo razgovor</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER ============ -->
+    <section class="ba">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="label mono"><span>(04)</span> Od nacrta do ključa</p>
+            <h2 class="h2 split-lines"><span class="line"><span>Ono što vidite</span></span><span class="line"><span>na papiru — <em class="outline">dobijete</em>.</span></span></h2>
+          </div>
+          <p class="section-head__aside">Povucite klizač. Ovako izgleda razlika između obećanja i isporuke kada je radi tim koji zna šta radi.</p>
+        </div>
+        <div class="ba__frame js-ba" data-hover data-cursor="Povuci">
+          <div class="ba__layer ba__after" data-art="ba-solid"></div>
+          <div class="ba__layer ba__before" data-art="ba-blueprint"></div>
+          <div class="ba__handle"><span><svg viewBox="0 0 24 24"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
+          <span class="ba__tag ba__tag--l mono">NACRT · REV. 04</span>
+          <span class="ba__tag ba__tag--r mono">ZAVRŠENO · 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="process" id="proces">
+      <div class="container">
+        <div class="section-head">
+          <p class="label mono"><span>(05)</span> Kako radimo</p>
+          <h2 class="h2 split-lines"><span class="line"><span>Pet koraka.</span></span><span class="line"><span>Nula iznenađenja<b class="accent">.</b></span></span></h2>
+        </div>
+        <div class="process__wrap">
+          <svg class="process__line" viewBox="0 0 4 1000" preserveAspectRatio="none" aria-hidden="true"><path class="process__path js-proc-path" d="M2 0V1000"/></svg>
+          <ol class="steps">
+            <li class="step"><span class="step__n">01</span><div><h3>Konsultacije i lokacija</h3><p>Izlazimo na teren, proveravamo parcelu, urbanističke uslove i vaš budžet. Besplatno, u roku od 48h.</p><span class="mono step__t">Nedelja 1</span></div></li>
+            <li class="step"><span class="step__n">02</span><div><h3>Projekat i dozvole</h3><p>Naši arhitekte i statičari rade idejni i glavni projekat. Mi jurimo papire — vi ne.</p><span class="mono step__t">Nedelja 2–10</span></div></li>
+            <li class="step"><span class="step__n">03</span><div><h3>Fiksna ponuda</h3><p>Dobijate ugovor sa fiksnom cenom i rokom. Svaki dan kašnjenja plaćamo mi — piše u ugovoru.</p><span class="mono step__t">Nedelja 11</span></div></li>
+            <li class="step"><span class="step__n">04</span><div><h3>Gradnja uživo</h3><p>Pratite gradilište preko aplikacije: kamere 24/7, nedeljni izveštaji i fotografije svakog sprata.</p><span class="mono step__t">Mesec 3–18</span></div></li>
+            <li class="step"><span class="step__n">05</span><div><h3>Ključ u ruke</h3><p>Tehnički prijem, upotrebna dozvola i 10 godina garancije na konstrukciju. Uselite se.</p><span class="mono step__t">Dan D</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CALCULATOR ============ -->
+    <section class="calc" id="kalkulator">
+      <div class="container calc__grid">
+        <div class="calc__left">
+          <p class="label mono"><span>(06)</span> Kalkulator</p>
+          <h2 class="h2 split-lines"><span class="line"><span>Koliko košta</span></span><span class="line"><span>vaš objekat?</span></span></h2>
+          <p class="calc__note">Okvirna procena za 10 sekundi. Precizna ponuda — za 48 sati.</p>
+
+          <div class="field">
+            <span class="field__label mono">Tip objekta</span>
+            <div class="chips js-type">
+              <button class="chip is-active" data-price="620" data-speed="1" data-hover>Stambeni</button>
+              <button class="chip" data-price="780" data-speed="1.1" data-hover>Poslovni</button>
+              <button class="chip" data-price="410" data-speed="0.6" data-hover>Hala</button>
+              <button class="chip" data-price="290" data-speed="0.5" data-hover>Rekonstrukcija</button>
+            </div>
+          </div>
+          <div class="field">
+            <span class="field__label mono">Površina <b class="js-area-out">1.200 m²</b></span>
+            <input type="range" class="range js-area" min="80" max="10000" step="10" value="1200" aria-label="Površina u kvadratnim metrima">
+            <div class="range__scale mono"><span>80</span><span>2.500</span><span>5.000</span><span>10.000 m²</span></div>
+          </div>
+          <div class="field">
+            <span class="field__label mono">Nivo završnih radova</span>
+            <div class="chips js-finish">
+              <button class="chip" data-mult="0.85" data-hover>Siva faza</button>
+              <button class="chip is-active" data-mult="1" data-hover>Standard</button>
+              <button class="chip" data-mult="1.3" data-hover>Premium</button>
+              <button class="chip" data-mult="1.7" data-hover>Lux</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc__result">
+          <div class="calc__card">
+            <div class="calc__card-head mono"><span>Okvirna procena</span><span class="blink">● LIVE</span></div>
+            <div class="calc__price"><span class="js-price">744.000</span><small>€</small></div>
+            <p class="mono calc__range js-range">± 8% · 682.000 – 806.000 €</p>
+            <div class="calc__bars">
+              <div class="calc__row"><span>Konstrukcija</span><i><b class="js-bar" data-share="0.42"></b></i><em class="mono js-bar-v">42%</em></div>
+              <div class="calc__row"><span>Instalacije</span><i><b class="js-bar" data-share="0.24"></b></i><em class="mono js-bar-v">24%</em></div>
+              <div class="calc__row"><span>Završni radovi</span><i><b class="js-bar" data-share="0.26"></b></i><em class="mono js-bar-v">26%</em></div>
+              <div class="calc__row"><span>Projekat i dozvole</span><i><b class="js-bar" data-share="0.08"></b></i><em class="mono js-bar-v">8%</em></div>
+            </div>
+            <div class="calc__foot">
+              <div><span class="mono">Rok izgradnje</span><b class="js-months">14 meseci</b></div>
+              <div><span class="mono">Radnika na gradilištu</span><b class="js-workers">38</b></div>
+            </div>
+            <a href="#kontakt" class="btn btn--block magnetic" data-hover><span>Želim preciznu ponudu</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="quotes">
+      <div class="container">
+        <p class="label mono"><span>(07)</span> Investitori o nama</p>
+        <div class="quotes__slider js-quotes">
+          <blockquote class="quote is-active">
+            <p>„Predali su nam zgradu 23 dana pre roka. Za 20 godina u ovom poslu, to mi se desilo prvi put.“</p>
+            <footer><b>Dragana Petrović</b><span class="mono">Direktorka, Petrović Invest</span></footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>„Cena iz ponude je bila cena na kraju. Ni dinar više. Već radimo treći projekat zajedno.“</p>
+            <footer><b>Nikola Stanković</b><span class="mono">Vlasnik, NS Logistika</span></footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>„Kamere uživo i nedeljni izveštaji — iz Minhena sam pratio gradnju kao da stojim na gradilištu.“</p>
+            <footer><b>Stefan Ilić</b><span class="mono">Privatni investitor</span></footer>
+          </blockquote>
+        </div>
+        <div class="quotes__nav">
+          <button class="qbtn js-q-prev magnetic" aria-label="Prethodno" data-hover><svg viewBox="0 0 24 24"><path d="M19 12H5m6 6-6-6 6-6"/></svg></button>
+          <span class="mono js-q-count">01 / 03</span>
+          <button class="qbtn js-q-next magnetic" aria-label="Sledeće" data-hover><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="logos" aria-hidden="true">
+        <div class="logos__track js-marquee" data-speed="-0.6">
+          <span>PETROVIĆ INVEST</span><span>◆</span><span>NS LOGISTIKA</span><span>◆</span><span>GRAD NIŠ</span><span>◆</span><span>DELTA NEKRETNINE</span><span>◆</span><span>VOJVODINA BUILD</span><span>◆</span><span>EKO PARK</span><span>◆</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA / CONTACT ============ -->
+    <section class="cta" id="kontakt">
+      <div class="cta__bg" aria-hidden="true"></div>
+      <div class="container cta__grid">
+        <div>
+          <p class="label mono"><span>(08)</span> Kontakt</p>
+          <h2 class="cta__title split-lines"><span class="line"><span>Imate parcelu?</span></span><span class="line"><span>Mi imamo <em class="outline">plan</em>.</span></span></h2>
+          <ul class="cta__info">
+            <li><span class="mono">Telefon</span><a href="tel:+381111234567" data-hover>+381 11 123 4567</a></li>
+            <li><span class="mono">Email</span><a href="mailto:office@armatura.rs" data-hover>office@armatura.rs</a></li>
+            <li><span class="mono">Kancelarija</span><span>Bulevar Mihajla Pupina 10, Beograd</span></li>
+          </ul>
+        </div>
+        <form class="form js-form" novalidate>
+          <div class="form__row">
+            <label class="input"><input type="text" name="ime" required placeholder=" "><span>Ime i prezime</span></label>
+            <label class="input"><input type="tel" name="tel" required placeholder=" "><span>Telefon</span></label>
+          </div>
+          <label class="input"><input type="email" name="email" placeholder=" "><span>Email</span></label>
+          <label class="input"><textarea name="poruka" rows="3" placeholder=" "></textarea><span>Opišite projekat (lokacija, površina, rok)</span></label>
+          <button type="submit" class="btn btn--block btn--big magnetic" data-hover><span>Pošalji upit</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+          <p class="form__note mono">Odgovaramo u roku od 24h. Bez obaveza.</p>
+          <div class="form__done" aria-live="polite">
+            <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="m15 27 7 7 15-15"/></svg>
+            <h3>Upit je poslat!</h3>
+            <p>Javićemo vam se u roku od 24h.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__big" aria-hidden="true"><span class="js-footer-word" data-company>ARMATURA</span></div>
+    <div class="container footer__row mono">
+      <span>© 2026 <span data-company>Armatura</span> Gradnja d.o.o.</span>
+      <span>PIB 100000000 · Licenca IKS 410 E</span>
+      <a href="#top" data-hover>Nazad na vrh ↑</a>
+    </div>
+  </footer>
+
+  <!-- ============ SALTY BADGE ============ -->
+  <a class="salty" href="https://salty.rs" target="_blank" rel="noopener" data-hover>
+    <span class="salty__dot"></span>
+    <span class="salty__txt"><b>Demo sajt</b> · Ovakav sajt za vašu firmu pravi <u>Salty.rs</u></span>
+    <span class="salty__arrow">↗</span>
+  </a>
+
+  <script src="art.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
