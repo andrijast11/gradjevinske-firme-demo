@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Armatura Construction — We Build What Lasts</title>
+  <meta name="description" content="Residential, commercial and industrial buildings, turnkey. From foundation to roof, on time and on budget.">
+  <meta name="theme-color" content="#0d0d0b">
+  <meta property="og:title" content="Armatura Construction — We Build What Lasts">
+  <meta property="og:description" content="Demo website for construction companies. Design and development: Salty.rs">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ff5a1f'/%3E%3Cpath d='M6 26 16 6l10 20h-5l-5-10-5 10z' fill='%230d0d0b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__grid"></div>
+    <div class="loader__top">
+      <span class="mono">[ <span data-company>ARMATURA</span> ]</span>
+      <span class="mono">44.7866° N · 20.4489° E</span>
+    </div>
+    <div class="loader__center">
+      <div class="loader__crane">
+        <span class="loader__cable"></span>
+        <span class="loader__block"></span>
+      </div>
+      <div class="loader__count"><span class="js-count">000</span><small>%</small></div>
+      <div class="loader__msg mono js-loader-msg">Digging foundations…</div>
+    </div>
+    <div class="loader__bar"><span class="js-loader-bar"></span></div>
+    <div class="loader__panels"><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+
+  <!-- ============ CURSOR ============ -->
+  <div class="cursor" aria-hidden="true"><div class="cursor__dot"></div><div class="cursor__ring"><span class="cursor__label">View</span></div></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="logo" aria-label="Home">
+      <svg viewBox="0 0 32 32" class="logo__mark" aria-hidden="true"><rect width="32" height="32" fill="currentColor"/><path d="M6 26 16 6l10 20h-5l-5-10-5 10z" fill="#0d0d0b"/></svg>
+      <span class="logo__text"><b data-company>ARMATURA</b><small>CONSTRUCTION</small></span>
+    </a>
+    <nav class="nav__links" aria-label="Main navigation">
+      <a href="#usluge" data-hover>Services</a>
+      <a href="#projekti" data-hover>Projects</a>
+      <a href="#proces" data-hover>Process</a>
+      <a href="#kalkulator" data-hover>Calculator</a>
+      <a href="#kontakt" data-hover>Contact</a>
+    </nav>
+    <a href="#kontakt" class="btn btn--sm magnetic" data-hover><span>Get a quote</span></a>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <div class="menu" aria-hidden="true">
+    <nav>
+      <a href="#usluge"><i>01</i>Services</a>
+      <a href="#projekti"><i>02</i>Projects</a>
+      <a href="#proces"><i>03</i>Process</a>
+      <a href="#kalkulator"><i>04</i>Calculator</a>
+      <a href="#kontakt"><i>05</i>Contact</a>
+    </nav>
+    <div class="menu__foot mono"><a href="tel:+381111234567">+381 11 123 4567</a><a href="mailto:office@armatura.rs">office@armatura.rs</a></div>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__hud mono" aria-hidden="true">
+        <div class="hud hud--tl"><span>PROJECT</span><b>RESIDENTIAL COMPLEX “SAVA 3”</b></div>
+        <div class="hud hud--tr"><span>FLOOR</span><b class="js-floor">00 / 16</b></div>
+        <div class="hud hud--bl"><span>HEIGHT</span><b class="js-height">0.00 m</b></div>
+        <div class="hud hud--br"><span>STATUS</span><b class="js-status">UNDER CONSTRUCTION</b></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="eyebrow mono reveal-up"><span class="dot"></span> Since 1998 · Belgrade · Novi Sad · Niš</p>
+        <h1 class="hero__title">
+          <span class="line"><span>We build</span></span>
+          <span class="line"><span>what</span></span>
+          <span class="line"><span><em class="outline">lasts</em><b class="accent">.</b></span></span>
+        </h1>
+        <div class="hero__bottom">
+          <p class="hero__lead reveal-up">Residential, commercial and industrial buildings, delivered <strong>turnkey</strong>. One contract, one fixed price, one deadline — and a team that keeps it.</p>
+          <div class="hero__ctas reveal-up">
+            <a href="#kalkulator" class="btn magnetic" data-hover><span>Estimate your build cost</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <a href="#projekti" class="btn btn--ghost magnetic" data-hover><span>Our projects</span></a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#manifest" class="scroll-cue mono" aria-label="Scroll down"><span>Scroll</span><i></i></a>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track js-marquee" data-speed="1">
+        <span>Residential</span><i>✦</i><span>Commercial</span><i>✦</i><span>Industrial halls</span><i>✦</i><span>Infrastructure</span><i>✦</i><span>Renovations</span><i>✦</i><span>Design &amp; engineering</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- ============ MANIFEST ============ -->
+    <section class="manifest" id="manifest">
+      <div class="container">
+        <p class="label mono"><span>(01)</span> Who we are</p>
+        <p class="manifest__text js-words">Every building starts with a promise. We have kept ours for 27 years — with concrete, steel and deadlines that never slip. No hidden costs, no excuses, no “next week, for sure”. Just buildings that stand exactly the way we said they would.</p>
+        <div class="manifest__sign">
+          <div class="sign__avatar">MJ</div>
+          <div><b>Marko Jovanović</b><span class="mono">Founder &amp; chief engineer</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats">
+      <div class="container stats__grid">
+        <div class="stat reveal-up"><b><span class="js-counter" data-to="27">0</span></b><span>years in business</span></div>
+        <div class="stat reveal-up"><b><span class="js-counter" data-to="340">0</span>+</b><span>completed buildings</span></div>
+        <div class="stat reveal-up"><b><span class="js-counter" data-to="1.2" data-decimals="1">0</span>M</b><span>m² built</span></div>
+        <div class="stat reveal-up"><b><span class="js-counter" data-to="98">0</span>%</b><span>delivered on time</span></div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services" id="usluge">
+      <div class="container">
+        <div class="section-head">
+          <p class="label mono"><span>(02)</span> Services</p>
+          <h2 class="h2 split-lines"><span class="line"><span>Everything on</span></span><span class="line"><span>one site<b class="accent">.</b></span></span></h2>
+        </div>
+        <ul class="svc-list">
+          <li class="svc" data-art="residential" data-hover>
+            <span class="svc__num mono">01</span>
+            <h3 class="svc__title">Residential</h3>
+            <p class="svc__desc">Buildings and complexes from 4 to 200 units. From permit to final inspection.</p>
+            <span class="svc__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </li>
+          <li class="svc" data-art="office" data-hover>
+            <span class="svc__num mono">02</span>
+            <h3 class="svc__title">Commercial</h3>
+            <p class="svc__desc">Offices, malls and hotels with glass facades people remember.</p>
+            <span class="svc__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </li>
+          <li class="svc" data-art="industrial" data-hover>
+            <span class="svc__num mono">03</span>
+            <h3 class="svc__title">Industrial</h3>
+            <p class="svc__desc">Steel and concrete halls, warehouses and logistics centres up to 50,000 m².</p>
+            <span class="svc__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </li>
+          <li class="svc" data-art="bridge" data-hover>
+            <span class="svc__num mono">04</span>
+            <h3 class="svc__title">Infrastructure</h3>
+            <p class="svc__desc">Bridges, roads and utilities — for municipalities and private investors.</p>
+            <span class="svc__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </li>
+          <li class="svc" data-art="villa" data-hover>
+            <span class="svc__num mono">05</span>
+            <h3 class="svc__title">Renovations</h3>
+            <p class="svc__desc">Extensions, added floors and repairs of existing buildings with minimal downtime.</p>
+            <span class="svc__arrow"><svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </li>
+        </ul>
+      </div>
+      <div class="svc-preview" aria-hidden="true"><div class="svc-preview__inner"></div></div>
+    </section>
+
+    <!-- ============ PROJECTS (horizontal) ============ -->
+    <section class="projects" id="projekti">
+      <div class="projects__sticky">
+        <div class="projects__head container">
+          <p class="label mono"><span>(03)</span> Selected projects</p>
+          <div class="projects__progress"><span class="js-proj-progress"></span></div>
+          <p class="mono projects__count"><span class="js-proj-index">01</span> / 05</p>
+        </div>
+        <div class="projects__track js-proj-track">
+          <div class="projects__intro">
+            <h2 class="h2">Buildings that<br>define the <em class="outline">skyline</em><b class="accent">.</b></h2>
+            <p>Five of the 340+ buildings we have handed over to investors — on time and on budget.</p>
+            <span class="mono drag-hint">Scroll → </span>
+          </div>
+          <article class="proj" data-hover data-cursor="Details">
+            <div class="proj__media"><div class="proj__art" data-art="tower"></div></div>
+            <div class="proj__meta"><span class="mono">2025 · Belgrade</span><h3>Sava Tower</h3><p>Mixed-use tower · 32 floors · 41,000 m²</p></div>
+          </article>
+          <article class="proj" data-hover data-cursor="Details">
+            <div class="proj__media"><div class="proj__art" data-art="residential"></div></div>
+            <div class="proj__meta"><span class="mono">2024 · Novi Sad</span><h3>Liman Park</h3><p>Residential complex · 6 buildings · 380 apartments</p></div>
+          </article>
+          <article class="proj" data-hover data-cursor="Details">
+            <div class="proj__media"><div class="proj__art" data-art="industrial"></div></div>
+            <div class="proj__meta"><span class="mono">2024 · Šimanovci</span><h3>LogiHub 2</h3><p>Logistics centre · 28,500 m² · 9 months</p></div>
+          </article>
+          <article class="proj" data-hover data-cursor="Details">
+            <div class="proj__media"><div class="proj__art" data-art="bridge"></div></div>
+            <div class="proj__meta"><span class="mono">2023 · Niš</span><h3>Nišava Bridge</h3><p>Pedestrian and cycle bridge · 86 m span</p></div>
+          </article>
+          <article class="proj" data-hover data-cursor="Details">
+            <div class="proj__media"><div class="proj__art" data-art="office"></div></div>
+            <div class="proj__meta"><span class="mono">2023 · Belgrade</span><h3>Nova Galerija</h3><p>Business centre · LEED Gold · 18,000 m²</p></div>
+          </article>
+          <div class="projects__end">
+            <p class="mono">The next one could be yours.</p>
+            <a href="#kontakt" class="btn magnetic" data-hover><span>Let's talk</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER ============ -->
+    <section class="ba">
+      <div class="container">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="label mono"><span>(04)</span> From blueprint to keys</p>
+            <h2 class="h2 split-lines"><span class="line"><span>What you see</span></span><span class="line"><span>on paper is what <em class="outline">you get</em>.</span></span></h2>
+          </div>
+          <p class="section-head__aside">Drag the slider. This is the gap between promise and delivery when the job is done by a team that knows what it is doing.</p>
+        </div>
+        <div class="ba__frame js-ba" data-hover data-cursor="Drag">
+          <div class="ba__layer ba__after" data-art="ba-solid"></div>
+          <div class="ba__layer ba__before" data-art="ba-blueprint"></div>
+          <div class="ba__handle"><span><svg viewBox="0 0 24 24"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></span></div>
+          <span class="ba__tag ba__tag--l mono">BLUEPRINT · REV. 04</span>
+          <span class="ba__tag ba__tag--r mono">COMPLETED · 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="process" id="proces">
+      <div class="container">
+        <div class="section-head">
+          <p class="label mono"><span>(05)</span> How we work</p>
+          <h2 class="h2 split-lines"><span class="line"><span>Five steps.</span></span><span class="line"><span>Zero surprises<b class="accent">.</b></span></span></h2>
+        </div>
+        <div class="process__wrap">
+          <svg class="process__line" viewBox="0 0 4 1000" preserveAspectRatio="none" aria-hidden="true"><path class="process__path js-proc-path" d="M2 0V1000"/></svg>
+          <ol class="steps">
+            <li class="step"><span class="step__n">01</span><div><h3>Consultation &amp; site</h3><p>We visit the site and check the plot, zoning conditions and your budget. Free, within 48 hours.</p><span class="mono step__t">Week 1</span></div></li>
+            <li class="step"><span class="step__n">02</span><div><h3>Design &amp; permits</h3><p>Our architects and structural engineers draw up the full design. We chase the paperwork — you don't.</p><span class="mono step__t">Weeks 2–10</span></div></li>
+            <li class="step"><span class="step__n">03</span><div><h3>Fixed-price offer</h3><p>You get a contract with a fixed price and deadline. Every day of delay is on us — it's in the contract.</p><span class="mono step__t">Week 11</span></div></li>
+            <li class="step"><span class="step__n">04</span><div><h3>Live construction</h3><p>Follow the site in our app: 24/7 cameras, weekly reports and photos of every floor.</p><span class="mono step__t">Months 3–18</span></div></li>
+            <li class="step"><span class="step__n">05</span><div><h3>Keys in hand</h3><p>Final inspection, occupancy permit and a 10-year structural warranty. Move in.</p><span class="mono step__t">Day D</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CALCULATOR ============ -->
+    <section class="calc" id="kalkulator">
+      <div class="container calc__grid">
+        <div class="calc__left">
+          <p class="label mono"><span>(06)</span> Calculator</p>
+          <h2 class="h2 split-lines"><span class="line"><span>What will your</span></span><span class="line"><span>build cost?</span></span></h2>
+          <p class="calc__note">A ballpark estimate in 10 seconds. A precise quote in 48 hours.</p>
+
+          <div class="field">
+            <span class="field__label mono">Building type</span>
+            <div class="chips js-type">
+              <button class="chip is-active" data-price="620" data-speed="1" data-hover>Residential</button>
+              <button class="chip" data-price="780" data-speed="1.1" data-hover>Commercial</button>
+              <button class="chip" data-price="410" data-speed="0.6" data-hover>Hall</button>
+              <button class="chip" data-price="290" data-speed="0.5" data-hover>Renovation</button>
+            </div>
+          </div>
+          <div class="field">
+            <span class="field__label mono">Floor area <b class="js-area-out">1,200 m²</b></span>
+            <input type="range" class="range js-area" min="80" max="10000" step="10" value="1200" aria-label="Floor area in square metres">
+            <div class="range__scale mono"><span>80</span><span>2,500</span><span>5,000</span><span>10,000 m²</span></div>
+          </div>
+          <div class="field">
+            <span class="field__label mono">Finish level</span>
+            <div class="chips js-finish">
+              <button class="chip" data-mult="0.85" data-hover>Shell &amp; core</button>
+              <button class="chip is-active" data-mult="1" data-hover>Standard</button>
+              <button class="chip" data-mult="1.3" data-hover>Premium</button>
+              <button class="chip" data-mult="1.7" data-hover>Lux</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc__result">
+          <div class="calc__card">
+            <div class="calc__card-head mono"><span>Ballpark estimate</span><span class="blink">● LIVE</span></div>
+            <div class="calc__price"><small>€</small><span class="js-price">744,000</span></div>
+            <p class="mono calc__range js-range">± 8% · €682,000 – €806,000</p>
+            <div class="calc__bars">
+              <div class="calc__row"><span>Structure</span><i><b class="js-bar" data-share="0.42"></b></i><em class="mono js-bar-v">42%</em></div>
+              <div class="calc__row"><span>MEP systems</span><i><b class="js-bar" data-share="0.24"></b></i><em class="mono js-bar-v">24%</em></div>
+              <div class="calc__row"><span>Finishes</span><i><b class="js-bar" data-share="0.26"></b></i><em class="mono js-bar-v">26%</em></div>
+              <div class="calc__row"><span>Design &amp; permits</span><i><b class="js-bar" data-share="0.08"></b></i><em class="mono js-bar-v">8%</em></div>
+            </div>
+            <div class="calc__foot">
+              <div><span class="mono">Build time</span><b class="js-months">14 months</b></div>
+              <div><span class="mono">Workers on site</span><b class="js-workers">38</b></div>
+            </div>
+            <a href="#kontakt" class="btn btn--block magnetic" data-hover><span>Get a precise quote</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="quotes">
+      <div class="container">
+        <p class="label mono"><span>(07)</span> What investors say</p>
+        <div class="quotes__slider js-quotes">
+          <blockquote class="quote is-active">
+            <p>“They handed over the building 23 days early. In 20 years in this business, that was a first for me.”</p>
+            <footer><b>Dragana Petrović</b><span class="mono">CEO, Petrović Invest</span></footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“The quoted price was the final price. Not a cent more. We're already on our third project together.”</p>
+            <footer><b>Nikola Stanković</b><span class="mono">Owner, NS Logistics</span></footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>“Live cameras and weekly reports — I followed the build from Munich as if I were standing on site.”</p>
+            <footer><b>Stefan Ilić</b><span class="mono">Private investor</span></footer>
+          </blockquote>
+        </div>
+        <div class="quotes__nav">
+          <button class="qbtn js-q-prev magnetic" aria-label="Previous" data-hover><svg viewBox="0 0 24 24"><path d="M19 12H5m6 6-6-6 6-6"/></svg></button>
+          <span class="mono js-q-count">01 / 03</span>
+          <button class="qbtn js-q-next magnetic" aria-label="Next" data-hover><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="logos" aria-hidden="true">
+        <div class="logos__track js-marquee" data-speed="-0.6">
+          <span>PETROVIĆ INVEST</span><span>◆</span><span>NS LOGISTICS</span><span>◆</span><span>CITY OF NIŠ</span><span>◆</span><span>DELTA REAL ESTATE</span><span>◆</span><span>VOJVODINA BUILD</span><span>◆</span><span>EKO PARK</span><span>◆</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA / CONTACT ============ -->
+    <section class="cta" id="kontakt">
+      <div class="cta__bg" aria-hidden="true"></div>
+      <div class="container cta__grid">
+        <div>
+          <p class="label mono"><span>(08)</span> Contact</p>
+          <h2 class="cta__title split-lines"><span class="line"><span>Got a plot?</span></span><span class="line"><span>We have a <em class="outline">plan</em>.</span></span></h2>
+          <ul class="cta__info">
+            <li><span class="mono">Phone</span><a href="tel:+381111234567" data-hover>+381 11 123 4567</a></li>
+            <li><span class="mono">Email</span><a href="mailto:office@armatura.rs" data-hover>office@armatura.rs</a></li>
+            <li><span class="mono">Office</span><span>Bulevar Mihajla Pupina 10, Belgrade</span></li>
+          </ul>
+        </div>
+        <form class="form js-form" novalidate>
+          <div class="form__row">
+            <label class="input"><input type="text" name="ime" required placeholder=" "><span>Full name</span></label>
+            <label class="input"><input type="tel" name="tel" required placeholder=" "><span>Phone</span></label>
+          </div>
+          <label class="input"><input type="email" name="email" placeholder=" "><span>Email</span></label>
+          <label class="input"><textarea name="poruka" rows="3" placeholder=" "></textarea><span>Describe your project (location, size, deadline)</span></label>
+          <button type="submit" class="btn btn--block btn--big magnetic" data-hover><span>Send enquiry</span><svg viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+          <p class="form__note mono">We reply within 24 hours. No obligation.</p>
+          <div class="form__done" aria-live="polite">
+            <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="m15 27 7 7 15-15"/></svg>
+            <h3>Enquiry sent!</h3>
+            <p>We'll get back to you within 24 hours.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__big" aria-hidden="true"><span class="js-footer-word" data-company>ARMATURA</span></div>
+    <div class="container footer__row mono">
+      <span>© 2026 <span data-company>Armatura</span> Construction Ltd.</span>
+      <span>Reg. no. 100000000 · Licence IKS 410 E</span>
+      <a href="#top" data-hover>Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- ============ SALTY BADGE ============ -->
+  <a class="salty" href="https://salty.rs" target="_blank" rel="noopener" data-hover>
+    <span class="salty__dot"></span>
+    <span class="salty__txt"><b>Demo site</b> · Want a site like this for your company? <u>Salty.rs</u> builds them</span>
+    <span class="salty__arrow">↗</span>
+  </a>
+
+  <script src="art.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
